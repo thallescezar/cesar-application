@@ -73,7 +73,6 @@ public class Utils {
 
 		for(int i = size - 1; i > header; i--) {
 			input[i+2] = input[i];
-			System.out.println(input);
 		}
 	}
 

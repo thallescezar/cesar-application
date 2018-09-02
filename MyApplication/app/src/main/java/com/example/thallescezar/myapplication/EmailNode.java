@@ -33,4 +33,29 @@ public class EmailNode {
 	public void setNext(EmailNode next) {
 		this.next = next;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+
+		if(obj == null) {
+			return false;
+		}
+
+		if(obj instanceof EmailNode) {
+			EmailNode head = (EmailNode) obj;
+
+			EmailNode node = (EmailNode) obj;
+			while(node != null) {
+				if(head.getMessage().equals(node.getMessage())){
+					head = head.getNext();
+					node = node.getNext();
+				} else {
+					return false;
+				}
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
